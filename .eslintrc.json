@@ -28,7 +28,7 @@
       {
         "ObjectExpression": "always",
         "ObjectPattern": { "multiline": true },
-        "ImportDeclaration": "never",
+        "ImportDeclaration": { "multiline": true },
         "ExportDeclaration": { "multiline": true, "minProperties": 3 }
       }
     ],

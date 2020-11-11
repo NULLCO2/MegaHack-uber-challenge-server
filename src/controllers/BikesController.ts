@@ -63,6 +63,22 @@ export class BikesController {
 
     const bikesRepository = getRepository(Bike);
 
+    const data = {
+      model,
+      cost,
+      availability,
+    };
+
+    const schema = Yup.object().shape({
+      model: Yup.string().required(),
+      cost: Yup.number().required(),
+      availability: Yup.boolean().required(),
+    });
+
+    await schema.validate(data, {
+      abortEarly: false,
+    });
+
     const bike = await bikesRepository.findOne(id);
 
     if (!bike) {

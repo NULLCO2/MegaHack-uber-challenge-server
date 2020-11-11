@@ -6,19 +6,25 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 
-@Entity('bikes')
-export class Bike {
+@Entity('places')
+export class Place {
   @PrimaryGeneratedColumn()
   id: number;
 
   @Column()
-  model: string;
+  name: string;
 
   @Column('integer')
-  cost: number;
+  max_bikes: number;
 
-  @Column('boolean')
-  availability: boolean;
+  @Column('integer')
+  number_bikes_available: number;
+
+  @Column('decimal')
+  latitude: number;
+
+  @Column('decimal')
+  longitude: number;
 
   @CreateDateColumn()
   created_at: Date;
