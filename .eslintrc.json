@@ -23,6 +23,7 @@
     "prettier"
   ],
   "rules": {
+    "consistent-return": "off",
     "object-curly-newline": [
       "error",
       {
