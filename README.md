@@ -4,11 +4,14 @@
 
 [PLaces Routes](#Places-routes) `/places`
 
+[Users Routes](#Users-routes) `/users`
+
 ---
 
 ## Bikes routes
 
 **get** `/bikes`
+
 ```javascript
   return [
     {
@@ -22,6 +25,7 @@
   ]
 ```
 **get** `/bikes/:id`
+
 ```javascript
   return {
     id: Number,
@@ -162,4 +166,38 @@
 
 ```javascript
   // no body returned for response
+```
+
+
+## Users Routes
+
+**get** `/places/:id`
+
+```javascript
+  return {
+    id: Number,
+    name: String,
+    email: String,
+    created_at: Date,
+    updated_at: Date,
+  }
+
+```
+
+**post**
+
+```javascript
+  const body = {
+    name: String,
+    email: String,
+    password: String,
+  }
+
+  return {
+    id: Number,
+    name: String,
+    email: String,
+    created_at: Date,
+    updated_at: Date,
+  }
 ```
